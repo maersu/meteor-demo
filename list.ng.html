@@ -1,7 +1,13 @@
 <div class="container">
     <header>
-        <h1>List</h1>
+        <h1>Messages</h1>
     </header>
+
+    <!-- add a form below the h1 -->
+    <form class="new-message" ng-submit="addMessage(newMessage); newMessage='';">
+        <input ng-model="newMessage" type="text"
+               name="text" placeholder="Type to add new message" />
+    </form>
 
     <ul ng-repeat="message in messages">
         <li>{{message.text}}</li>

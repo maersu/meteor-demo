@@ -1,18 +1,29 @@
-if (Meteor.isClient) {
+Messages = new Mongo.Collection('messages');
 
+if (Meteor.isClient) {
     // This code only runs on the client
     angular.module('demo', ['angular-meteor']);
 
-    angular.module('demo').controller('ListCtrl', ['$scope',
-        function ($scope) {
+    angular.module('demo').controller('ListCtrl', ['$scope', '$meteor',
+        function ($scope, $meteor) {
 
-            $scope.messages = [
-                {text: 'Message 1'},
-                {text: 'Message 2'},
-                {text: 'Message 3'}
-            ];
+            // The function will return a the result of calling the find
+            // function with the sort parameter on our Tasks collection
+            $scope.messages = $meteor.collection( function() {
+                return Messages.find({}, { sort: { createdAt: -1 } })
+            });
 
+            // code we need to add to listen to the submit event on the form
+            $scope.addMessage = function (newTask) {
+                // create new message
+                $scope.messages.push({
+                        text: newTask,
+                        createdAt: new Date()
+                    }
+                );
+            };
         }]);
+
 }
 if (Meteor.isServer) {
     Meteor.startup(function () {
