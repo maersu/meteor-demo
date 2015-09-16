@@ -7,11 +7,11 @@ Build apps that are a delight to use, faster than you ever thought possible
 
 ## Demo
 
-## S1
+### S1
 
 * Simple App
 
-## S2 
+### S2 
 
 * Angualr support: meteor add urigo:angular 
 * Package Manager: [atmospherejs](https://atmospherejs.com)
