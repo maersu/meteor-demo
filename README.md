@@ -16,8 +16,8 @@ Build apps that are a delight to use, faster than you ever thought possible
 
 ### S2
 
-* Package Manaqger: [atmospherejs](https://atmospherejs.com)
 * Angualr support: meteor add urigo:angular
+* Package Manaqger: [atmospherejs](https://atmospherejs.com)
 * SCSS support: meteor add fourseven:scss
 
 
