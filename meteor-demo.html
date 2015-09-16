@@ -1,14 +1,8 @@
 <head>
-  <title>meteor-demo</title>
+    <title>List</title>
 </head>
 
-<body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+<body ng-app="demo"
+      ng-include="'list.ng.html'"
+      ng-controller="ListCtrl">
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>

@@ -1,23 +1,21 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
-    }
-  });
+    // This code only runs on the client
+    angular.module('demo', ['angular-meteor']);
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
+    angular.module('demo').controller('ListCtrl', ['$scope',
+        function ($scope) {
+
+            $scope.messages = [
+                {text: 'Message 1'},
+                {text: 'Message 2'},
+                {text: 'Message 3'}
+            ];
+
+        }]);
 }
-
 if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
+    Meteor.startup(function () {
+        // code to run on server at startup
+    });
 }
