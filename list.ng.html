@@ -3,6 +3,8 @@
         <h1>Messages</h1>
     </header>
 
+    <meteor-include src="loginButtons"></meteor-include>
+
     <!-- add a form below the h1 -->
     <form class="new-message" ng-submit="addMessage(newMessage); newMessage='';">
         <input ng-model="newMessage" type="text"
@@ -10,6 +12,6 @@
     </form>
 
     <ul ng-repeat="message in messages">
-        <li>{{message.text}}</li>
+        <li>{{message.username}} - {{message.text}}</li>
     </ul>
 </div>

@@ -60,6 +60,10 @@ Add ios plattform
 * Offline data: [GroundMeteor](https://github.com/GroundMeteor/db)
 * Optimistic UI [Optimistic UI](http://info.meteor.com/blog/optimistic-ui-with-meteor-latency-compensation)
 
+### S5
+
+* Add user accounts: meteor add accounts-ui accounts-password
+
 ## Sources
 
 * meteor.com

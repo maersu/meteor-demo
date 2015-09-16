@@ -64,6 +64,19 @@ input {
 
 }
 
+#login-buttons, .accounts-dialog {
+
+  .login-button {
+    background: #6e3797;
+    border: 1px solid #573f94;
+  }
+
+}
+
+.login-link-and-dropdown-list {
+  padding: 15px;
+}
+
 ul {
   margin: 0;
   padding: 0;

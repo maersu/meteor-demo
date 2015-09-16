@@ -4,7 +4,10 @@ if (Meteor.isClient) {
     // This code only runs on the client
     angular.module('demo', ['angular-meteor']);
 
-
+    Accounts.ui.config({
+        passwordSignupFields: "USERNAME_ONLY"
+    });
+    
     // Bootstrap Angular to mobile as well
     function onReady() {
         angular.bootstrap(document, ['demo']);
@@ -31,7 +34,9 @@ if (Meteor.isClient) {
                 // create new message
                 $scope.messages.push({
                         text: newTask,
-                        createdAt: new Date()
+                        createdAt: new Date(),
+                        owner: Meteor.userId(), // _id of logged in user
+                        username: Meteor.user().username
                     }
                 );
             };
