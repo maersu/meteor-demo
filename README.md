@@ -5,6 +5,7 @@ Build apps that are a delight to use, faster than you ever thought possible
 
 * Full Stack Javascript Framework
 * page: meteor.com
+* on top of node
 
 
 ## Demo
@@ -37,6 +38,27 @@ DDP example:
 * Current meteor hoster: [modulus.io](http://modulus.io)
 * Next: Galaxy by meteor group
 * Plain Server: [meteor-up](https://github.com/arunoda/meteor-up) 
+
+### S4
+
+Go Mobile - Easy to use [cordova support for android/ios](https://github.com/meteor/meteor/wiki/Meteor-Cordova-Phonegap-integration)
+
+Add ios plattform
+
+    meteor add-platform ios
+    
+    # ios simulator
+    meteor run ios-device
+
+    # ios device
+    meteor run ios-device
+    # or 
+    meteor run ios-device --mobile-server jsbern.meteor.com
+    
+        
+* Be aware of [hotpush](http://info.meteor.com/blog/meteor-hot-code-push)
+* Offline data: [GroundMeteor](https://github.com/GroundMeteor/db)
+* Optimistic UI [Optimistic UI](http://info.meteor.com/blog/optimistic-ui-with-meteor-latency-compensation)
 
 ## Sources
 
